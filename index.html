@@ -17,6 +17,9 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v6.1.2/css/all.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <!-- imported libraries go here -->
     <script type="importmap">
@@ -25,19 +28,30 @@
       }
     </script>
   </head>
-  <body class="bg-light">
-    <div id="app">
-      <h1>Pokémon Cards</h1>
-      <div id="cardsContainer"></div>
+  <body class="bg-dark">
+    <div id="app" class="container">
+      <h1>Gotta Catch 'Em All</h1>
+      <div class="two-columns">
+        <div id="cardsContainer" class="grid"></div>
 
-      <template id="cardTemplate">
-        <div class="card">
-          <div class="card-body">
-            <h2 class="card-title"></h5>
-            <p class="card-text"></p>
-            <a href="#" class="card-link"></a>
+        <template id="cardTemplate">
+          <div class="pokemon-card">
+            <img class="pokemon-card-image" />
+            <h2 class="pokemon-card-title"></h5>
+            <p class="pokemon-card-subtitle"></p>
+            <a class="pokemon-card-link"></a>
           </div>
-        </div>
+        </template>
+
+        <div id="infoContainer"></div>
+
+        <template id="infoTemplate">
+          <div class="info">
+            <img class="pokemon-card-image" />
+            <h2 class="pokemon-card-title"></h5>
+            <p class="pokemon-card-subtitle"></p>
+          </div>
+        </template>
       </div>
     </template>
     <!-- Import your own javascript -->
